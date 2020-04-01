@@ -20,7 +20,7 @@ public class LaserGun : MonoBehaviour
         //playe the sound
         audioSource.Play();
         //shoot the linerenderer
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(lineTransform.position, lineTransform.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
             //we hit something- draw a line to the hit point
